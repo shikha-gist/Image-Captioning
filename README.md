@@ -68,6 +68,9 @@ Please cite the following BibTex:
 If you find the paper and this repository helpful, please consider citing our paper [LATGeO](https://arxiv.org/pdf/2109.07799.pdf). Thank you!
 
 
+## License
+This project is licensed under MLV Lab GIST. 
+
 
 ## Acknowledgments
 We would like to thanks [AImageLab](https://github.com/aimagelab/meshed-memory-transformer), [peteanderson80](https://github.com/peteanderson80/bottom-up-attention) and [facebookresearch](https://github.com/facebookresearch/detr) teams.
