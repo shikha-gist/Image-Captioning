@@ -36,7 +36,12 @@ Two Jupyter Notebooks are provided :
 
 ## GUI-Demo
 We have also provided the code for the GUI-Demo of our method.\
-You could use the code for your application as well.
+Following are some results after running this GUI-Demo file "GUI_Demo_LATGeO_RCNN.py"
+![alt text](https://github.com/shikha-gist/Image-Captioning/blob/main/GUI_Demo_Results/demo6.png)
+
+![alt text](https://github.com/shikha-gist/Image-Captioning/blob/main/GUI_Demo_Results/demo1.png)
+
+You could use the provided GUI-Demo code for your application as well.
 
 
 ## Citation
