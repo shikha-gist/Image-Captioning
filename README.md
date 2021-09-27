@@ -44,6 +44,15 @@ Following are some results after running this GUI-Demo file "GUI_Demo_LATGeO_RCN
 You could use the provided GUI-Demo code for your application as well.
 
 
+## LATGeO Evaluation on MSCOCO Dataset
+Model | BLEU-1 | BLEU-4 | METEOR | ROUGE-L | SPICE | CIDEr-D 
+--- | --- | --- | --- |--- |--- |--- 
+LATGeO | 76.5 | 36.4 | 27.8 | 56.7 | - | 115.8
+LATGeO + RL | 81.0 | 38.8 | 29.2 | 58.7 | 22.9 | 131.7 
+
+
+
+
 ## Citation
 Please cite the following BibTex: 
 <pre>
