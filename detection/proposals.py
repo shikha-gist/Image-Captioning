@@ -28,6 +28,28 @@ def plot_results(pil_img, prob, boxes,CLASSES):
                 bbox=dict(facecolor='yellow', alpha=0.5))
     plt.axis('off')
     plt.show()
+   
+
+def plot_results_GUI(pil_img, prob, boxes,CLASSES):   ### for GUI 
+    plt.figure(figsize=(16,10))
+
+    plt.imshow(pil_img)
+    ax = plt.gca()
+    colors = detr.COLORS * 100
+    for p, (xmin, ymin, xmax, ymax), c in zip(prob, boxes.tolist(), colors):
+        if p[p.argmax()]<0.7:
+            continue
+        ax.add_patch(plt.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin,
+                                   fill=False, color=c, linewidth=3))
+        cl = p.argmax()
+        text = f'{CLASSES[cl]}: {p[cl]:0.2f}'
+        ax.text(xmin, ymin, text, fontsize=15,
+                bbox=dict(facecolor='yellow', alpha=0.5))
+    plt.axis('off')    
+    plt.savefig('temp.png', pad_inches = 0, bbox_inches='tight', transparent=True)
+    plt.close()
+    im_url=Image.open('temp.png')
+    return im_url
 
 
 def detr_detection(detrModel,imageUrl,device,show_objs):  
@@ -80,6 +102,7 @@ def rccn_detection(imageUrl,show_objs):
    
     if show_objs==True:
         plot_results(im,probs,bboxes,rcnn.classes)
+        
     ## adding background probs
     probs=np.concatenate([np.zeros((probs.shape[0],1)),probs],axis=-1) 
     probs=np.concatenate([np.zeros((1,probs.shape[1])),probs],axis=0)
@@ -118,12 +141,15 @@ def process_image(imageUrl,detectionModel,text_field,args,max_detections=50,devi
    if args.detection=='detr':
        objs,bbox,probs,labels,im=detr_detection(detectionModel,imageUrl,device,show_objs)
        objs=detr.process_objs(obj_backbone,objs)
-   elif args.detection=='rcnn': ## here if args.detection is not detr , then detectionModel is ignored!
+   elif args.detection=='rcnn': ## here if args.detection is not detr , then detection Model is ignored!
       objs,bbox,probs,labels,im= rccn_detection(imageUrl,show_objs)
 
    objs=background.combine_back_objs(im,objs,background_backbone)
    features ,bboxes,probas,precomp_labels= stadndardize(objs,bbox,probs,labels,text_field,max_detections)
    return features ,bboxes,probas,precomp_labels,im
+
+   
+
 
    
 
