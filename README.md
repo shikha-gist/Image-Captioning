@@ -69,7 +69,7 @@ If you find the paper and this repository helpful, please consider citing our pa
 
 
 ## License
-This project is licensed under MLV Lab GIST. 
+This project is licensed under Machine Learning & Vision Laboratory (MLV Lab), GIST. 
 
 
 ## Acknowledgments
