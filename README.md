@@ -1,7 +1,9 @@
 # LATGeO: Image-Captioning
 This repository contains PyTorch implemetation of the paper [Label-Attention Transformer with Geometrically Coherent Objects for Image Captioning](https://arxiv.org/pdf/2109.07799.pdf) ! \
 If you find our paper or provided codes helpful in your research, then please do not forget to cite our paper. Thank you! \
-The following architecture represents our proposed model LATGeO for Image Captioning. \
+The following architecture represents our proposed model LATGeO for Image Captioning. 
+
+![alt text](https://github.com/shikha-gist/Image-Captioning/blob/main/caption_model/figure/arch.png)
 
 ## Requirements
 <pre>
@@ -34,7 +36,7 @@ Two Jupyter Notebooks are provided :
 
 ## GUI-Demo
 We have also provided the code for the GUI-Demo of our method.\
-You could use the code for your application as well.\
+You could use the code for your application as well.
 
 
 ## Citation
