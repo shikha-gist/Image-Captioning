@@ -1,5 +1,5 @@
 ## Update: Repo for LATGeO: Image Captioning
-The trained models have been uploaded in the directory "trained_model" to help future researchers.
+The trained models have been uploaded in the directory "trained_models" to help future researchers.
 
 # LATGeO: Image-Captioning
 This repository contains PyTorch implemetation of the paper [Label-Attention Transformer with Geometrically Coherent Objects for Image Captioning](https://arxiv.org/pdf/2109.07799.pdf) ! \
